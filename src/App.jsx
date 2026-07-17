@@ -186,10 +186,10 @@ function App() {
   const certifications = [
     { name: "ISO 22000:2018", detail: lang === 'vi' ? "Hệ thống quản lý an toàn thực phẩm" : "Food safety management system" },
     { name: "SFA Approved", detail: lang === 'vi' ? "Cơ quan Thực phẩm Singapore cấp phép" : "Singapore Food Agency approved" },
-    { name: "TÜV SÜD (Đức)", detail: lang === 'vi' ? "Chứng nhận chất lượng & an toàn toàn cầu" : "Global quality & safety certification" },
-    { name: "Chứng nhận HALAL", detail: lang === 'vi' ? "Đạt chuẩn Halal quốc tế" : "International Halal certified" },
-    { name: "FDA (Mỹ) Approved", detail: lang === 'vi' ? "Thành phần HMOs được FDA chấp thuận an toàn" : "HMO ingredients FDA GRAS approved" },
-    { name: "EFSA (Châu Âu) Approved", detail: lang === 'vi' ? "Cơ quan An toàn Thực phẩm Châu Âu chứng nhận" : "European Food Safety Authority certified" },
+    { name: lang === 'vi' ? "TÜV SÜD (Đức)" : "TÜV SÜD (Germany)", detail: lang === 'vi' ? "Chứng nhận chất lượng & an toàn toàn cầu" : "Global quality & safety certification" },
+    { name: lang === 'vi' ? "Chứng nhận HALAL" : "HALAL Certified", detail: lang === 'vi' ? "Đạt chuẩn Halal quốc tế" : "International Halal certified" },
+    { name: lang === 'vi' ? "FDA (Mỹ) Approved" : "FDA (USA) Approved", detail: lang === 'vi' ? "Thành phần HMOs được FDA chấp thuận an toàn" : "HMO ingredients FDA GRAS approved" },
+    { name: lang === 'vi' ? "EFSA (Châu Âu) Approved" : "EFSA (Europe) Approved", detail: lang === 'vi' ? "Cơ quan An toàn Thực phẩm Châu Âu chứng nhận" : "European Food Safety Authority certified" },
   ]
 
   const partnerLogos = [
@@ -216,7 +216,7 @@ function App() {
           <a href="#" className="flex items-center gap-3 group">
             <img 
               src="/images/logo.png" 
-              className="h-10 w-auto object-contain transition-transform group-hover:scale-105" 
+              className="h-14 w-auto object-contain transition-transform group-hover:scale-105" 
               alt="HereMOM Logo" 
             />
             {/* <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-secondary">
@@ -529,6 +529,50 @@ function App() {
                         ? 'Sản phẩm được nghiên cứu chuyên sâu tại các phòng Lab hiện đại ở Trung Quốc, ứng dụng công nghệ sinh học lên men vi sinh tiên tiến từ đường tự nhiên để tạo ra cấu trúc 6 HMOs tinh khiết tuyệt đối, an toàn và hoàn toàn không biến đổi gen (Non-GMO).'
                         : 'Developed in advanced labs in China, utilizing state-of-the-art bio-fermentation from natural sugars to produce 100% pure, safe, and Non-GMO 6-HMO structures.'}
                     </p>
+                  </div>
+                </Reveal>
+
+                {/* Product lifestyle images — 2×2 staggered grid */}
+                <Reveal effect="reveal-fade-right" delay={300}>
+                  <div className="grid grid-cols-2 gap-3">
+                    {/* Col 1 — top-aligned */}
+                    <div className="flex flex-col gap-3">
+                      <div className="relative overflow-hidden rounded-2xl aspect-[3/4] group shadow-organic">
+                        <img
+                          src="/images/product4.png"
+                          alt="HereMOM product lifestyle"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                      </div>
+                      <div className="relative overflow-hidden rounded-2xl aspect-[3/4] group shadow-organic">
+                        <img
+                          src="/images/product5b.jpg"
+                          alt="HereMOM mom and baby lifestyle"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                      </div>
+                    </div>
+                    {/* Col 2 — offset down for stagger effect */}
+                    <div className="flex flex-col gap-3 mt-6">
+                      <div className="relative overflow-hidden rounded-2xl aspect-[3/4] group shadow-organic">
+                        <img
+                          src="/images/product5.png"
+                          alt="HereMOM 6HMOs product box"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                      </div>
+                      <div className="relative overflow-hidden rounded-2xl aspect-[3/4] group shadow-organic">
+                        <img
+                          src="/images/product1b.jpg"
+                          alt="HereMOM 6HMOs boxes with lamp"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                      </div>
+                    </div>
                   </div>
                 </Reveal>
               </div>
@@ -963,7 +1007,7 @@ function App() {
                       <div className="bg-surface p-5 rounded-2xl border border-outline-variant/25 shadow-sm flex items-start gap-3 h-full">
                         <img 
                           src="/images/award-icon.svg" 
-                          alt="Icon chứng nhận" 
+                          alt={lang === 'vi' ? 'Icon chứng nhận' : 'Certification icon'} 
                           className="w-6 h-6 flex-shrink-0 object-contain mt-0.5" 
                         />
                         <div>
@@ -1052,15 +1096,12 @@ function App() {
           
           {/* Logo & Intro */}
           <div className="lg:col-span-3 space-y-6">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center">
               <img 
                 src="/images/logo.png" 
-                className="h-12 w-auto object-contain" 
+                className="h-16 w-auto object-contain brightness-0 invert" 
                 alt="HereMOM Logo" 
               />
-              <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-white">
-                HereMOM®
-              </span>
             </div>
             <p className="text-sm font-light leading-relaxed text-surface-variant/80">
               {lang === 'vi'
