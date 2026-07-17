@@ -551,7 +551,7 @@ function App() {
                       HereMOM® Stage 3
                     </h2>
                     <p className="text-sm sm:text-base text-on-surface-variant font-light leading-relaxed">
-                      Mặc dù HereMOM có 3 dòng (Stage 1, 2, 3), nhưng thị trường Việt Nam tập trung cung cấp dòng **Stage 3** cao cấp dành riêng cho trẻ từ **12 tháng tuổi trở lên** nhằm đồng hành bảo vệ trẻ trong giai đoạn tiếp xúc môi trường bên ngoài nhiều nhất.
+                      Mặc dù HereMOM có 3 dòng (Stage 1, 2, 3), nhưng thị trường Việt Nam tập trung cung cấp dòng <strong>Stage 3</strong> cao cấp dành riêng cho trẻ từ <strong>12 tháng tuổi trở lên</strong> nhằm đồng hành bảo vệ trẻ trong giai đoạn tiếp xúc môi trường bên ngoài nhiều nhất.
                     </p>
                   </div>
                 </Reveal>
