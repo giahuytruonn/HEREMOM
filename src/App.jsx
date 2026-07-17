@@ -55,16 +55,16 @@ function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeMechanism, setActiveMechanism] = useState(0)
   const [activeTimeline, setActiveTimeline] = useState(0)
-  const [activeProductImage, setActiveProductImage] = useState('/images/product2.png')
+  const [activeProductImage, setActiveProductImage] = useState('/images/product2.jpg')
 
 
 
   const productImages = [
-    '/images/product2.png',
-    '/images/product3.png',
-    '/images/product4.png',
-    '/images/product5.png',
-    '/images/product6.png',
+    '/images/product2.jpg',
+    '/images/product3.jpg',
+    '/images/product4.jpg',
+    '/images/product5.jpg',
+    '/images/product6.jpg',
   ]
 
   const mechanisms = [
@@ -321,7 +321,7 @@ function App() {
               <Reveal effect="reveal-zoom-in" delay={300} className="w-full max-w-md">
                 <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-organic border-4 border-white/50 group">
                   <img 
-                    src="/images/product.png" 
+                    src="/images/product.jpg" 
                     alt="HereMOM Product Package" 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
