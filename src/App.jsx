@@ -460,7 +460,7 @@ function App() {
                     {lang === 'vi' ? 'Tìm hiểu khoa học' : 'Learn the Science'} <ChevronRight size={16} />
                   </a>
                   <a 
-                    href="#contact" 
+                    href="https://www.motherswork.com.vn/products/b%e1%bb%99t-dinh-d%c6%b0%e1%bb%a1ng-tang-c%c6%b0%e1%bb%9dng-d%e1%bb%81-khang-heremom-6hmos-cho-tr%e1%ba%bb-t%e1%bb%ab-12-thang" 
                     className="px-8 py-4 rounded-full bg-secondary text-on-secondary font-semibold text-sm shadow-md hover:bg-secondary-fixed hover:text-on-secondary-fixed hover:scale-[1.02] active:scale-95 transition-all duration-300"
                   >
                     {lang === 'vi' ? 'Mua ngay' : 'Buy Now'}
